@@ -4,4 +4,7 @@
   <RunConfiguration>
     <ResultsDirectory>.\TestResults</ResultsDirectory>
   </RunConfiguration>
+ <TestRunParameters>
+    <Parameter name="applicationpath" value="C:\Users\staraich\source\repos\WpfApp1\WpfApp1\bin\Debug" />
+  </TestRunParameters>
 </RunSettings>

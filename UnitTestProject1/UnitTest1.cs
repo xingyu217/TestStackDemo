@@ -25,10 +25,11 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod1()
         {
-            var applicationDirectory = TestContext.TestRunDirectory;
-            Console.WriteLine(applicationDirectory);
+           string p= TestContext.Properties["applicationpath"].ToString();
+            //var applicationDirectory = TestContext.TestRunDirectory;
+            //Console.WriteLine(applicationDirectory);
 
-            var applicationPath = Path.Combine(applicationDirectory+"\\..\\..\\", "WpfApp1.exe");
+            var applicationPath = Path.Combine(p, "WpfApp1.exe");
             Application application = Application.Launch(applicationPath);
             Window window = application.GetWindow("MainWindow", InitializeOption.NoCache);
             TextBox tb= window.Get<TextBox>("textBox");
