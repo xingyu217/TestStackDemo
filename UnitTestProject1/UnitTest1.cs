@@ -28,13 +28,15 @@ namespace UnitTestProject1
             var applicationDirectory = TestContext.TestRunDirectory;
             Console.WriteLine(applicationDirectory);
 
-            var applicationPath = Path.Combine(@"C:\Users\staraich\source\repos\WpfApp1\", "WpfApp1.exe");
+            var applicationPath = Path.Combine(applicationDirectory+"\\..\\..\\", "WpfApp1.exe");
             Application application = Application.Launch(applicationPath);
             Window window = application.GetWindow("MainWindow", InitializeOption.NoCache);
             TextBox tb= window.Get<TextBox>("textBox");
             Button button = window.Get<Button>("button");
             button.Click();
-            
+            application.Close();
+
+
         }
     }
 }
